@@ -1,0 +1,57 @@
+/* responsive-layout.css */
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "nav aside"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+
+header {
+  grid-area: header;
+  background: #007bff;
+  color: white;
+  padding: 10px;
+}
+
+nav {
+  grid-area: nav;
+  background: #6c757d;
+  color: white;
+  padding: 10px;
+}
+
+main {
+  grid-area: main;
+  background: #e9ecef;
+  padding: 10px;
+}
+
+aside {
+  grid-area: aside;
+  background: #dee2e6;
+  padding: 10px;
+}
+
+footer {
+  grid-area: footer;
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
